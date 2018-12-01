@@ -1,3 +1,5 @@
+import itertools
+
 from solutions import BaseSolution
 
 
@@ -8,13 +10,17 @@ class Solution(BaseSolution):
         return 'Day 01: Chronal Calibration'
 
     def solve(self, puzzle_input, freq=0):
-        freq_changes = map(int, puzzle_input.splitlines())
-        for n in freq_changes:
-            freq += n
-        return freq
+        return sum(map(int, puzzle_input.splitlines()))
 
-    def solve_again(self, puzzle_input):
-        pass
+    def solve_again(self, puzzle_input, freq=0):
+        freq_changes = map(int, puzzle_input.splitlines())
+        known = {0}
+        for n in itertools.cycle(freq_changes):
+            freq += n
+            if freq in known:
+                break
+            known.add(freq)
+        return freq
 
 
 if __name__ == '__main__':
