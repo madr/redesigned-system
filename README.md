@@ -1,7 +1,7 @@
 Advent of Code 2018
 ===================
 
-Lösningar för #aoc2017 i Python 3 (testat mot 3.7.1).
+Lösningar för #aoc2018 i Python 3 (testat mot 3.7.1).
 
 Hjälpscript
 -----------
@@ -28,3 +28,13 @@ Starta automatisk testkörare (ersätt `XX` med dagens nummer):
 
     export PYTHONPATH=$(pwd)
     ls solutions/**/*.py | entr -c -r python tests/day_XX_tests.py
+
+Logg
+----
+
+ * Dag 1: Insikten när en for-loop kan ersättas med en `sum`. xD Dagens `itertools`: `cycle()`
+ * Dag 2: Dagens `itertools`: `combinations()`, efter många försök att vara för smart med `zip()`.
+ * Dag 3: Dagens `itertools` (ja, det verkar vara ett tema!): `product()`. Två nästlade for-loopar kändes trist.
+ * Dag 4: Mycket text och mycket kod. Dagens `itertools`: `chain()`.
+ * Dag 5: Krånglade till saker genom att köra listor istället för strängar, skrev om till att istället använda en 
+   `reduce`. Inga `itertools`. :(
