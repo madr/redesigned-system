@@ -1,3 +1,7 @@
+import time
+from datetime import timedelta
+
+
 class BaseSolution:
     puzzle_input = ""
     input_file = None
@@ -12,11 +16,17 @@ class BaseSolution:
 
     def show_results(self):
         self.parse_input(self.input_file)
-        print('\n\n{}\n{}\n\nPart 1: {}\nPart 2: {}'.format(
+        start_time = time.monotonic()
+        p1 = self.solve(self.puzzle_input)
+        p2 = self.solve_again(self.puzzle_input)
+        end_time = time.monotonic()
+        duration = timedelta(seconds=end_time - start_time)
+        print('\n\n{}\n{}\n\nPart 1: {}\nPart 2: {}\n\nDuration: {}'.format(
             str(self),
             '-' * len(str(self)),
-            self.solve(self.puzzle_input),
-            self.solve_again(self.puzzle_input),
+            p1,
+            p2,
+            duration,
         ))
 
     def solve(self, puzzle_input):
