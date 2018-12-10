@@ -4,10 +4,10 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '01.txt'
+    input_file = '01.in'
 
     def __str__(self):
-        return 'Day 01: Chronal Calibration'
+        return 'Day 1: Chronal Calibration'
 
     def solve(self, puzzle_input, freq=0):
         return sum(map(int, puzzle_input.splitlines()))

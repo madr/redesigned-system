@@ -1,4 +1,3 @@
-import functools
 import itertools
 from collections import defaultdict, Counter
 
@@ -6,10 +5,10 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '06.txt'
+    input_file = '06.in'
 
     def __str__(self):
-        return 'Day 06: Chronal Coordinates'
+        return 'Day 6: Chronal Coordinates'
 
     def solve(self, puzzle_input):
         locations = [tuple(map(int, pi.split(', '))) for pi in puzzle_input.splitlines()]
@@ -35,13 +34,15 @@ class Solution(BaseSolution):
         return len(region)
 
     def _manhattan_distance(self, coordinate, locations):
-        distances = [(i, abs(abs(target[0] - coordinate[0]) + abs(target[1] - coordinate[1]))) for i, target in enumerate(locations)]
+        distances = [(i, abs(abs(target[0] - coordinate[0]) + abs(target[1] - coordinate[1])))
+                     for i, target in enumerate(locations)]
         return sorted(distances, key=lambda x: x[1])
 
     def _location_boundaries(self, locations):
         min_width, min_height = map(min, zip(*locations))
         max_width, max_height = map(max, zip(*locations))
-        finite_locations = [i for i, l in enumerate(locations) if l[0] not in (min_width, max_width) and l[1] in (min_height, max_height)]
+        finite_locations = [i for i, l in enumerate(locations) if l[0] not in (min_width, max_width)
+                            and l[1] in (min_height, max_height)]
         return finite_locations, range(min_width, max_width), range(min_height, max_height)
 
 

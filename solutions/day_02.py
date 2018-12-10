@@ -5,10 +5,10 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '02.txt'
+    input_file = '02.in'
 
     def __str__(self):
-        return 'Day 02: Inventory Management System'
+        return 'Day 2: Inventory Management System'
 
     def _count(self, line, num):
         return any(map(lambda n: n == num, dict(Counter(line).most_common()).values()))

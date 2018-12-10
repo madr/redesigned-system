@@ -6,10 +6,10 @@ from solutions import BaseSolution
 sys.setrecursionlimit(15000)  # hej python!
 
 class Solution(BaseSolution):
-    input_file = '08.txt'
+    input_file = '08.in'
 
     def __str__(self):
-        return 'Day 08: Memory Maneuver'
+        return 'Day 8: Memory Maneuver'
 
     def solve(self, puzzle_input):
         data = list(map(int, (puzzle_input.split())))

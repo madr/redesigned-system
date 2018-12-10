@@ -4,10 +4,10 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '05.txt'
+    input_file = '05.in'
 
     def __str__(self):
-        return 'Day 05: Alchemical Reduction'
+        return 'Day 5: Alchemical Reduction'
 
     def solve(self, puzzle_input):
         return self._react_polymer(puzzle_input)

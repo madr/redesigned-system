@@ -8,10 +8,10 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '04.txt'
+    input_file = '04.in'
 
     def __str__(self):
-        return 'Day 04: Repose Record'
+        return 'Day 4: Repose Record'
 
     def solve(self, puzzle_input):
         data = self._parse_and_group_data(puzzle_input)

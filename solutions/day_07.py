@@ -1,11 +1,10 @@
 import itertools
-from collections import defaultdict
 
 from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '07.txt'
+    input_file = '07.in'
     def __str__(self):
         return 'Day 07: The Sum of Its Parts'
 
@@ -49,7 +48,8 @@ class Solution(BaseSolution):
         diff = ord('A')
         while completed < stop_at:
             available_steps = sorted([child for child, parents in relations.items()
-                                      if (all(prnt in completed_steps for prnt in parents) or len(parents) == 0) and child not in completed_steps])
+                                      if (all(prnt in completed_steps for prnt in parents) or len(parents) == 0) and
+                                      child not in completed_steps])
             available_steps = [s for s in available_steps if s not in in_progress and s not in completed_steps]
             available_workers = [i for i, w in enumerate(workers) if not w]
             while available_steps and available_workers:

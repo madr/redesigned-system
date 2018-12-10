@@ -13,7 +13,7 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '{day_no}.txt'
+    input_file = '{day_no}.in'
 
     def __str__(self):
         return 'Day {day}: {name}'
@@ -41,17 +41,18 @@ class Day{day_no}TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_something(self):
-        assert self.solution.solve('puzzle_input') == True
+        puzzle_input = ''
+        assert self.solution.solve(puzzle_input) == True
 
 
 if __name__ == '__main__':
     unittest.main()
     '''.strip().format(day_no=day_no.zfill(2)) + '\n')
-    with open('inputs/{}.txt'.format(day_no.zfill(2)), 'w') as i:
+    with open('inputs/{}.in'.format(day_no.zfill(2)), 'w') as i:
         i.write('')
     exit(0)
 
-print('\nAdvent of Code 2017'
+print('\nAdvent of Code 2018'
       '\n###################'
       '\n\nby Anders Ytterström (@madr)')
 

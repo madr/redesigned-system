@@ -6,12 +6,12 @@ from solutions import BaseSolution
 
 
 class Solution(BaseSolution):
-    input_file = '03.txt'
+    input_file = '03.in'
 
     claim_pattern = re.compile(r'#(\d+) @ (\d+),(\d+): (\d+)x(\d+)')
 
     def __str__(self):
-        return 'Day 03: No Matter How You Slice It'
+        return 'Day 3: No Matter How You Slice It'
 
     def solve(self, puzzle_input):
         claims = self.get_claims(puzzle_input)

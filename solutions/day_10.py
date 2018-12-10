@@ -25,7 +25,7 @@ class Point:
 
 
 class Solution(BaseSolution):
-    input_file = '10.txt'
+    input_file = '10.in'
 
     def __str__(self):
         return 'Day 10: Day 10: The Stars Align'
