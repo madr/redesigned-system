@@ -26,7 +26,7 @@ class Solution(BaseSolution):
         initital_pots, rules = self._prepare(puzzle_input)
         pots, repeated_at = self._grow(initital_pots, rules, 999)
         BFN = 50 * 10 ** 9  # Big Fucking Number
-        return sum(BFN + k - repeated_at for k, v in pots.items() if v == '#')
+        return sum(k + (BFN - repeated_at) for k, v in pots.items() if v == '#')
 
     def _grow(self, pots, rules, generations):
         seen = dict()

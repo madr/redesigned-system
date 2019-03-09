@@ -36,8 +36,17 @@ Logg
  * Dag 5: Krånglade till saker genom att köra listor istället för strängar, skrev om till att istället använda en 
    `reduce`. Inga `itertools`. :(
  * Dag 6: Längsta körtiden hittills och kan högst troligtvis optimeras.
- * Dag 7: Svårtolkad uppgift. Otäckt med workers.
+ * Dag 7: Svårtolkad uppgift. Otäckt med workers. Rant i [kodkommentar om icke hjälpsamt 
+   exempel](https://github.com/madr/redesigned-system/blob/master/solutions/day_07.py#L63-L70).
  * Dag 8: Rekursion! Invigning av `sys.setrecursionlimit()`.
  * Dag 9: Harakiri.
  * Dag 10: Kult med visualisering! Fick tipset att leta efter minsta bounds, och kom då fram till den magiska siffran 
    `10391`. Det krävdes en hel del optimering, då första versionen var slö.
+ * Dag 11: [Summed-area table](https://en.wikipedia.org/wiki/Summed-area_table). Lösning 2 behöver refaktoriseras för
+   att använda partial sum och summed-area table, den tar 8-12h att köra med brute force.
+ * Dag 12: Otydliga instruktioner. [Inte bara enligt mig](https://www.reddit.com/r/adventofcode/comments/a5gt7h/day12_part_1_explanation_for_the_example/),
+    [vad det verkar](https://www.reddit.com/r/adventofcode/comments/a5eztl/2018_day_12_solutions/).
+ * Day 13: Ännu en dag med ett exempel som var vilseledande för att testa ens kod. 
+   [Rant i kodkommentar](https://github.com/madr/redesigned-system/blob/master/solutions/day_13.py#L108-L141).
+ * Day 14:
+ * Dag 15: 
